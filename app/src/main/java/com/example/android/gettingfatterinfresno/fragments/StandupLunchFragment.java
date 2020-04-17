@@ -38,12 +38,12 @@ public class StandupLunchFragment extends Fragment {
 
         //create list of FoodSpots
         final ArrayList<FoodSpot> spots = new ArrayList<>();
-        spots.add(new FoodSpot(getString(R.string.maw_title), getString(R.string.maw_desc), getString(R.string.maw_address), getString(R.string.maw_phone), getString(R.string.maw_url), R.drawable.mawnpaw_yelp_miekt, getString(R.string.maw_cap)));
-        spots.add(new FoodSpot(getString(R.string.brock_title), getString(R.string.brock_desc), getString(R.string.brock_address), getString(R.string.brock_phone), getString(R.string.brock_url), R.drawable.beerock_yelp_meganp, getString(R.string.brock_cap)));
-        spots.add(new FoodSpot(getString(R.string.ken_title), getString(R.string.ken_desc), getString(R.string.ken_address), getString(R.string.ken_phone), getString(R.string.ken_url), R.drawable.kenji_yelp_joelc, getString(R.string.ken_cap)));
-        spots.add(new FoodSpot(getString(R.string.wc_title), getString(R.string.wc_desc), getString(R.string.wc_address), getString(R.string.wc_phone), getString(R.string.none), R.drawable.westcoast_yelp_galod, getString(R.string.wc_cap)));
-        spots.add(new FoodSpot(getString(R.string.charr_title), getString(R.string.charr_desc), getString(R.string.charr_address), getString(R.string.charr_phone), getString(R.string.none), R.drawable.charrito_yelp_jazminp, ""));
-        spots.add(new FoodSpot(getString(R.string.kar_title), getString(R.string.kar_desc), getString(R.string.kar_address), getString(R.string.kar_phone), getString(R.string.none), R.drawable.karlitas_yelp_greateste, getString(R.string.kar_cap)));
+        spots.add(new FoodSpot(getString(R.string.maw_title), getString(R.string.maw_desc), getString(R.string.maw_address), getString(R.string.maw_phone), getString(R.string.maw_url), R.drawable.mawnpaw_yelp_miekt));
+        spots.add(new FoodSpot(getString(R.string.brock_title), getString(R.string.brock_desc), getString(R.string.brock_address), getString(R.string.brock_phone), getString(R.string.brock_url), R.drawable.beerock_yelp_meganp));
+        spots.add(new FoodSpot(getString(R.string.ken_title), getString(R.string.ken_desc), getString(R.string.ken_address), getString(R.string.ken_phone), getString(R.string.ken_url), R.drawable.kenji_yelp_joelc));
+        spots.add(new FoodSpot(getString(R.string.wc_title), getString(R.string.wc_desc), getString(R.string.wc_address), getString(R.string.wc_phone), getString(R.string.none), R.drawable.westcoast_yelp_galod));
+        spots.add(new FoodSpot(getString(R.string.charr_title), getString(R.string.charr_desc), getString(R.string.charr_address), getString(R.string.charr_phone), getString(R.string.none), R.drawable.charrito_yelp_jazminp));
+        spots.add(new FoodSpot(getString(R.string.kar_title), getString(R.string.kar_desc), getString(R.string.kar_address), getString(R.string.kar_phone), getString(R.string.none), R.drawable.karlitas_yelp_greateste));
 
         FoodSpotAdapter adpater = new FoodSpotAdapter(getActivity(), spots);
         ListView listView = rootView.findViewById(R.id.list_of_spots);
@@ -64,7 +64,6 @@ public class StandupLunchFragment extends Fragment {
                 intent.putExtra("url", currentSpot.getWebsite());
                 intent.putExtra("bgColor", bgColor);
                 intent.putExtra("imageId", currentSpot.getImageId());
-                intent.putExtra("caption", currentSpot.getCaption());
                 startActivity(intent);
             }
         });

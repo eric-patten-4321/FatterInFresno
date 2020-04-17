@@ -19,12 +19,9 @@ public class DetailActivity extends AppCompatActivity {
     TextView displayUrl;
     TextView displayDescription;
     LinearLayout detailsLayout;
-    ImageView linkIcon;
     ImageView picHolder;
-    ImageView locationIcon;
     CardView imageCard;
     LinearLayout detailsPicHolder;
-    TextView picCaption;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +36,6 @@ public class DetailActivity extends AppCompatActivity {
         final String url = intent.getStringExtra("url");
         int bgColor = intent.getExtras().getInt("bgColor");
         int imageId = intent.getExtras().getInt("imageId");
-        String caption = intent.getExtras().getString("caption");
 
         displayName = findViewById(R.id.deets_name);
         displayDescription = findViewById(R.id.deets_description);
@@ -47,24 +43,21 @@ public class DetailActivity extends AppCompatActivity {
         displayPhone = findViewById(R.id.deets_phone);
         displayUrl = findViewById(R.id.deets_url);
         detailsLayout = findViewById(R.id.detail_layout);
-        linkIcon = findViewById(R.id.iv_link_icon);
-        locationIcon = findViewById(R.id.iv_location_icon);
         picHolder = findViewById(R.id.iv_details_pic);
         imageCard = findViewById(R.id.cardview_details_pics);
         detailsPicHolder = findViewById(R.id.details_layout);
-        picCaption = findViewById(R.id.tv_details_pic_caption);
+
 
         displayName.setText(name);
         displayDescription.setText(description);
         displayAddress.setText(address);
         displayPhone.setText(phone);
         detailsLayout.setBackgroundColor(bgColor);
-        picCaption.setText(caption);
+
 
         //if url == none, remove the link icon and url textview
         if (url.equals("none")) {
             displayUrl.setVisibility(View.GONE);
-            linkIcon.setVisibility(View.GONE);
         } else {
             displayUrl.setText(url);
         }
@@ -86,7 +79,6 @@ public class DetailActivity extends AppCompatActivity {
                 }
             });
         } else {
-            locationIcon.setVisibility(View.GONE);
             displayAddress.setText(R.string.call_for_location);
         }
 

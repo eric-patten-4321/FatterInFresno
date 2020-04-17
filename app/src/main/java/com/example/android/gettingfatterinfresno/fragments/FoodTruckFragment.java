@@ -37,13 +37,13 @@ public class FoodTruckFragment extends Fragment {
 
         //create list of FoodSpots
         final ArrayList<FoodSpot> spots = new ArrayList<>();
-        spots.add(new FoodSpot(getString(R.string.gg_title), getString(R.string.gg_desc), getString(R.string.call_ahead), getString(R.string.gg_phone), getString(R.string.gg_url), R.drawable.gastro_yelp_kyneshiaa, ""));
-        spots.add(new FoodSpot(getString(R.string.md_title), getString(R.string.md_desc), getString(R.string.call_ahead), getString(R.string.md_phone), getString(R.string.md_url), R.drawable.meltdown_yelp_ritab, getString(R.string.md_cap)));
-        spots.add(new FoodSpot(getString(R.string.emp_title), getString(R.string.emp_desc), getString(R.string.call_ahead), getString(R.string.emp_phone), getString(R.string.none), R.drawable.emapnada_yelp_ryana, getString(R.string.emp_cap)));
-        spots.add(new FoodSpot(getString(R.string.tm_title), getString(R.string.tm_desc), getString(R.string.call_ahead), getString(R.string.tm_phone), getString(R.string.none), R.drawable.twistedmasala_yelp_rebekahm, ""));
-        spots.add(new FoodSpot(getString(R.string.pv_title), getString(R.string.pv_desc), getString(R.string.call_ahead), getString(R.string.pv_phone), getString(R.string.none), R.drawable.vegan_yelp_jeets, getString(R.string.pv_cap)));
-        spots.add(new FoodSpot("Phil's Corner Grill", getString(R.string.phil_desc), getString(R.string.phil_address), getString(R.string.phil_phone), getString(R.string.none), R.drawable.phils_yelp_sethu, getString(R.string.phil_cap)));
-        spots.add(new FoodSpot("MEGA Texas Barbeque", getString(R.string.mega_desc), getString(R.string.mega_address), getString(R.string.mega_phone), getString(R.string.none), R.drawable.mega_yelp_lj, getString(R.string.mega_cap)));
+        spots.add(new FoodSpot(getString(R.string.gg_title), getString(R.string.gg_desc), getString(R.string.call_ahead), getString(R.string.gg_phone), getString(R.string.gg_url), R.drawable.gastro_yelp_kyneshiaa));
+        spots.add(new FoodSpot(getString(R.string.md_title), getString(R.string.md_desc), getString(R.string.call_ahead), getString(R.string.md_phone), getString(R.string.md_url), R.drawable.meltdown_yelp_ritab));
+        spots.add(new FoodSpot(getString(R.string.emp_title), getString(R.string.emp_desc), getString(R.string.call_ahead), getString(R.string.emp_phone), getString(R.string.none), R.drawable.emapnada_yelp_ryana));
+        spots.add(new FoodSpot(getString(R.string.tm_title), getString(R.string.tm_desc), getString(R.string.call_ahead), getString(R.string.tm_phone), getString(R.string.none), R.drawable.twistedmasala_yelp_rebekahm));
+        spots.add(new FoodSpot(getString(R.string.pv_title), getString(R.string.pv_desc), getString(R.string.call_ahead), getString(R.string.pv_phone), getString(R.string.none), R.drawable.vegan_yelp_jeets));
+        spots.add(new FoodSpot(getString(R.string.phils_title), getString(R.string.phil_desc), getString(R.string.phil_address), getString(R.string.phil_phone), getString(R.string.none), R.drawable.phils_yelp_sethu));
+        spots.add(new FoodSpot(getString(R.string.mega_title), getString(R.string.mega_desc), getString(R.string.mega_address), getString(R.string.mega_phone), getString(R.string.none), R.drawable.mega_yelp_lj));
 
         FoodSpotAdapter adpater = new FoodSpotAdapter(getActivity(), spots);
         final ListView listView = rootView.findViewById(R.id.list_of_spots);
@@ -64,7 +64,6 @@ public class FoodTruckFragment extends Fragment {
                 intent.putExtra("url", currentSpot.getWebsite());
                 intent.putExtra("bgColor", bgColor);
                 intent.putExtra("imageId", currentSpot.getImageId());
-                intent.putExtra("caption", currentSpot.getCaption());
                 startActivity(intent);
             }
         });

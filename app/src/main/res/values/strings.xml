@@ -151,6 +151,8 @@
     <string name="phone_icon">phone Icon</string>
     <string name="link_icon">link icon</string>
     <string name="container_for_picture_of_item">container for picture of item</string>
+    <string name="phils_title">Phil\'s Corner Grill</string>
+    <string name="mega_title">MEGA Texas Barbeque</string>
 
 
 </resources>

@@ -70,3 +70,29 @@ public class FoodTruckFragment extends Fragment {
     }
 
 }
+
+// TODO: 4/18/20 FEEDBACK ABOUT USING STRING ARRAYS to hold all strings to be passed in intent... try it out.
+/*
+
+  Instead of getting all these strings and passing them to the DetailActivity, you can easily send just the ID of the clicked location, and define a String array <string-array> in strings resource file with the corresponding names and values, and then, you can retrieve these values in the DetailActivity.
+        For example:
+
+//in strings.xml
+<string-array
+        name="house_of_kebab">
+<item>House of Kebab</item>
+<item> an\'t go wrong with the lula kebab.</item>
+</string-array>
+        And then in the Fragment here you just send the spots.get(postition).getId()
+        Also, it would be handy to add the indices of the elements inside the string array in Constants.java so they don't get mixed up by mistake.
+
+//keep the indices of parameters saved in static constants so you don't mix them up or have to look every time you extract them
+static final int NAME_PARAMETER_INDEX = 0;
+        And in the DetailActivity just:
+
+
+        String id = intent.getStringExtra("id");
+        String[] params = getResources.getStringArray(R.array.id)
+        displayName.setText(params[Constants.NAME_PARAMETER_INDEX]);
+
+        */

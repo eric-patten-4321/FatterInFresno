@@ -47,13 +47,11 @@ public class DetailActivity extends AppCompatActivity {
         imageCard = findViewById(R.id.cardview_details_pics);
         detailsPicHolder = findViewById(R.id.details_layout);
 
-
         displayName.setText(name);
         displayDescription.setText(description);
         displayAddress.setText(address);
         displayPhone.setText(phone);
         detailsLayout.setBackgroundColor(bgColor);
-
 
         //if url == none, remove the link icon and url textview
         if (url.equals("none")) {

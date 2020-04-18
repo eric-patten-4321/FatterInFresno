@@ -18,7 +18,6 @@ import com.example.android.gettingfatterinfresno.classes.FoodSpot;
 
 import java.util.ArrayList;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -27,7 +26,6 @@ public class LocalSitdownFragment extends Fragment {
     public LocalSitdownFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,12 +37,12 @@ public class LocalSitdownFragment extends Fragment {
         //create list of FoodSpots
         final ArrayList<FoodSpot> spots = new ArrayList<>();
         spots.add(new FoodSpot(getString(R.string.duck_title), getString(R.string.duck_desc), getString(R.string.duck_address), getString(R.string.duck_phone), getString(R.string.duck_url), R.drawable.madduck));
-        spots.add(new FoodSpot(getString(R.string.hk_title), getString(R.string.hk_desc), getString(R.string.hk_address), getString(R.string.hk_phone), getString(R.string.hk_url), R.drawable.houseofkebab));
-        spots.add(new FoodSpot(getString(R.string.oka_title), getString(R.string.oka_desc), getString(R.string.oka_address), getString(R.string.oka_phone), getString(R.string.none), R.drawable.oka));
+        spots.add(new FoodSpot(getString(R.string.hk_title), getString(R.string.hk_desc), getString(R.string.hk_address), getString(R.string.hk_phone), getString(R.string.hk_url)));
+        spots.add(new FoodSpot(getString(R.string.oka_title), getString(R.string.oka_desc), getString(R.string.oka_address), getString(R.string.oka_phone), getString(R.string.none)));
         spots.add(new FoodSpot(getString(R.string.sushi_title), getString(R.string.sushi_desc), getString(R.string.sushi_address), getString(R.string.sushi_phone), getString(R.string.sushi_url), R.drawable.ilivesushi));
-        spots.add(new FoodSpot(getString(R.string.sh_title), getString(R.string.sh_desc), getString(R.string.sh_address), getString(R.string.sh_phone), getString(R.string.sh_url), R.drawable.schoolhouse));
-        spots.add(new FoodSpot(getString(R.string.pis_title), getString(R.string.pis_desc), getString(R.string.pis_address), getString(R.string.pis_phone), getString(R.string.pis_url), R.drawable.pismos));
-        spots.add(new FoodSpot(getString(R.string.an_title), getString(R.string.an_desc), getString(R.string.an_address), getString(R.string.an_phone), getString(R.string.an_url), R.drawable.pasta_puttanesca));
+        spots.add(new FoodSpot(getString(R.string.sh_title), getString(R.string.sh_desc), getString(R.string.sh_address), getString(R.string.sh_phone), getString(R.string.sh_url)));
+        spots.add(new FoodSpot(getString(R.string.pis_title), getString(R.string.pis_desc), getString(R.string.pis_address), getString(R.string.pis_phone), getString(R.string.pis_url)));
+        spots.add(new FoodSpot(getString(R.string.an_title), getString(R.string.an_desc), getString(R.string.an_address), getString(R.string.an_phone), getString(R.string.an_url)));
         spots.add(new FoodSpot(getString(R.string.palms_title), getString(R.string.palms_desc), getString(R.string.palms_address), getString(R.string.palms_phone), getString(R.string.palms_url), R.drawable.porterhouse));
 
         FoodSpotAdapter adpater = new FoodSpotAdapter(getActivity(), spots);

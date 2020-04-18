@@ -27,7 +27,6 @@ public class BakeryFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,12 +36,12 @@ public class BakeryFragment extends Fragment {
 
         //create list of FoodSpots
         final ArrayList<FoodSpot> spots = new ArrayList<>();
-        spots.add(new FoodSpot(getString(R.string.ampTitle), getString(R.string.ampDesc), getString(R.string.ampAddress), getString(R.string.ampPhone), getString(R.string.ampUrl), R.drawable.ampersand));
+        spots.add(new FoodSpot(getString(R.string.ampTitle), getString(R.string.ampDesc), getString(R.string.ampAddress), getString(R.string.ampPhone), getString(R.string.ampUrl)));
         spots.add(new FoodSpot(getString(R.string.gTitle), getString(R.string.gDesc), getString(R.string.gAddress), getString(R.string.gPhone), getString(R.string.gUrl), R.drawable.gs));
         spots.add(new FoodSpot(getString(R.string.labouTitle), getString(R.string.labouDesc), getString(R.string.labouAddress), getString(R.string.labouPhone), getString(R.string.labouUrl), R.drawable.labou));
-        spots.add(new FoodSpot(getString(R.string.bdTitle), getString(R.string.bdDesc), getString(R.string.bdAddress), getString(R.string.bdPhone), getString(R.string.none), R.drawable.bakerydelights));
+        spots.add(new FoodSpot(getString(R.string.bdTitle), getString(R.string.bdDesc), getString(R.string.bdAddress), getString(R.string.bdPhone), getString(R.string.none)));
         spots.add(new FoodSpot(getString(R.string.sbbTitle), getString(R.string.sbbDesc), getString(R.string.callAhead), getString(R.string.sbbPhone), getString(R.string.sbbUrl), R.drawable.sweetbeginning));
-        spots.add(new FoodSpot(getString(R.string.bbbTitle), getString(R.string.bbbDesc), getString(R.string.bbbAddress), getString(R.string.bbbPhone), getString(R.string.none), R.drawable.armenbakery));
+        spots.add(new FoodSpot(getString(R.string.bbbTitle), getString(R.string.bbbDesc), getString(R.string.bbbAddress), getString(R.string.bbbPhone), getString(R.string.none)));
 
         FoodSpotAdapter adpater = new FoodSpotAdapter(getActivity(), spots);
         ListView listView = rootView.findViewById(R.id.list_of_spots);
